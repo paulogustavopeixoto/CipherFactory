@@ -1,23 +1,41 @@
-const { vigenere, caesar, atbash } = require('./index');
+const { vigenere, caesar, atbash, railFence, rot13 } = require('./index');
 
 const message = "This is a secret message.";
 const keyVigenere = "Paulo";
 const shiftCaesar = 5;
+const keyRailFence = 6;
 
+// Vigenere Test
 const encodedVigenere = vigenere.encode(message, keyVigenere);
-console.log("Encoded:", encodedVigenere);
+console.log("Encoded Vigenere:", encodedVigenere);
 
 const decodedVigenere = vigenere.decode(encodedVigenere, keyVigenere);
-console.log("Decoded:", decodedVigenere);
+console.log("Decoded Vigenere:", decodedVigenere);
 
+// Caesar Test
 const encodedCaesar = caesar.encode(message, shiftCaesar);
-console.log("Encoded:", encodedCaesar);
+console.log("Encoded Caesar:", encodedCaesar);
 
 const decodedCaesar = caesar.decode(encodedCaesar, shiftCaesar);
-console.log("Decoded:", decodedCaesar);
+console.log("Decoded Caesar:", decodedCaesar);
 
+// Atbash Test
 const encodedAtbash = atbash.encode(message);
-console.log("Encoded:", encodedAtbash);
+console.log("Encoded Atbash:", encodedAtbash);
 
 const decodedAtbash = atbash.decode(encodedAtbash);
-console.log("Decoded:", decodedAtbash);
+console.log("Decoded Atbash:", decodedAtbash);
+
+// RailFence Test
+const encodedRailFence = railFence.encode(message, keyRailFence);
+console.log("Encoded RailFence:", encodedRailFence);
+
+const decodedRailFence = railFence.decode(encodedRailFence, keyRailFence);
+console.log("Decoded RailFence:", decodedRailFence);
+
+// Rot13 Test
+const encodedRot13 = rot13.encode(message);
+console.log("Encoded Rot13:", encodedRot13);
+
+const decodedRot13 = rot13.decode(encodedRot13);
+console.log("Decoded Rot13:", decodedRot13);

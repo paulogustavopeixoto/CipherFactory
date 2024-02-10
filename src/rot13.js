@@ -1,7 +1,20 @@
 
 const rot13 = {
     encode: function(message) {
-        // ROT13 doesn't use a key. The implementation can directly encode and decode.
+        return message.split('').map(char => {
+            if (char.match(/[a-z]/i)) {
+                const charCode = char.charCodeAt(0);
+                // Uppercase letters
+                if (charCode >= 65 && charCode <= 90) {
+                    return String.fromCharCode(((charCode - 65 + 13) % 26) + 65);
+                }
+                // Lowercase letters
+                else if (charCode >= 97 && charCode <= 122) {
+                    return String.fromCharCode(((charCode - 97 + 13) % 26) + 97);
+                }
+            }
+            return char;
+        }).join('');
     },
 
     decode: function(encodedMessage) {
@@ -11,3 +24,4 @@ const rot13 = {
 };
 
 module.exports = rot13;
+

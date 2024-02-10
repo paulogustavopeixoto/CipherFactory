@@ -23,20 +23,20 @@ const railFence = {
         if (key < 2) return encodedMessage;
 
         const n = encodedMessage.length;
-        const cycleLen = key * 2 - 2;
-        let decoded = new Array(n);
+        let decoded = Array(n).fill('');
+        let k = 0;
 
-        let index = 0;
-        for (let i = 0; i < key; i++) {
-            let step = (i === 0 || i === key - 1) ? cycleLen : 2 * (key - i - 1);
-            let complementStep = cycleLen - step;
-            let pos = i;
-            let useStep = true;
-
-            while (pos < n) {
-                decoded[pos] = encodedMessage.charAt(index++);
-                pos += useStep ? step : complementStep;
-                if (step !== complementStep) useStep = !useStep;
+        for (let r = 0; r < key; r++) {
+            let index = r;
+            let down = true; // Direction flag
+            while (index < n) {
+                decoded[index] = encodedMessage[k++];
+                if (r === 0 || r === key - 1) { // Edges move straight down/up
+                    index += 2 * (key - 1);
+                } else { // Zigzag pattern
+                    index += down ? 2 * (key - 1 - r) : 2 * r;
+                    down = !down; // Change direction
+                }
             }
         }
 
