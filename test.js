@@ -1,4 +1,4 @@
-const { vigenere, caesar, atbash, railFence, rot13 } = require('./index');
+const { vigenere, caesar, atbash, railFence, rot13, playfair } = require('./index');
 
 const message = "This is a secret message.";
 const keyVigenere = "Paulo";
@@ -39,3 +39,11 @@ console.log("Encoded Rot13:", encodedRot13);
 
 const decodedRot13 = rot13.decode(encodedRot13);
 console.log("Decoded Rot13:", decodedRot13);
+
+// Playfair Test
+const encodedPlayfair = playfair.encode(message, keyVigenere);
+console.log("Encoded Playfair:", encodedPlayfair);
+
+const decodedPlayfair = playfair.decode(encodedPlayfair, keyVigenere);
+console.log("Decoded Playfair:", decodedPlayfair);
+
