@@ -16,7 +16,7 @@ const caesar = {
     },
 
     decode: function(encodedMessage, shift) {
-        return this.encode(encodedMessage, -shift);
+        return caesar.encode(encodedMessage, -shift);
     }
 };
 

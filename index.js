@@ -1,9 +1,9 @@
-const vigenere = require('./src/vigenereCipher');
-const caesar = require('./src/vigenereCipher');
+const vigenere = require('./src/vigenere');
+const caesar = require('./src/caesar');
+const atbash = require('./src/atbash');
 
 module.exports = {
-    encodeVigenere: vigenere.encode,
-    decodeVigenere: vigenere.decode,
-    encodeCaesar: caesar.encode,
-    decodeCaesar: caesar.decode,
+    vigenere,
+    caesar,
+    atbash
   };
