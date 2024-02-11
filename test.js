@@ -5,6 +5,7 @@ const keyVigenere = "Paulo";
 const shiftCaesar = 5;
 const keyRailFence = 6;
 
+
 // Vigenere Test
 const encodedVigenere = vigenere.encode(message, keyVigenere);
 console.log("Encoded Vigenere:", encodedVigenere);
@@ -46,4 +47,3 @@ console.log("Encoded Playfair:", encodedPlayfair);
 
 const decodedPlayfair = playfair.decode(encodedPlayfair, keyVigenere);
 console.log("Decoded Playfair:", decodedPlayfair);
-

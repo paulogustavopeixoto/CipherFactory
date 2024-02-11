@@ -4,8 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Paulo Assis Peixoto",
+  "license": "MIT",
+  "keywords": [
+    "caesaer",
+    "vigenere",
+    "atbash",
+    "Rail Fence",
+    "rot13",
+    "playfair",
+    "math",
+    "puzzle",
+    "ciphers",
+    "cipher"
+  ]
 }
