@@ -1,7 +1,7 @@
 {
   "name": "cipher-factory",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "Cipher Factory is a comprehensive Node.js package that provides a suite of classical cipher algorithms for encryption and decryption purposes.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
