@@ -1,4 +1,5 @@
-![NPM Version](https://img.shields.io/npm/v/cipher-factory)
+![NPM Version](https://img.shields.io/npm/v/cipher-factory) ![NPM Downloads](https://img.shields.io/npm/dy/cipher-factory)
+
 
 ```
 ________/\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\____/\\\________/\\\__/\\\\\\\\\\\\\\\____/\\\\\\\\\____________________/\\\\\\\\\\\\\\\_____/\\\\\\\\\___________/\\\\\\\\\__/\\\\\\\\\\\\\\\_______/\\\\\_________/\\\\\\\\\______/\\\________/\\\_        
