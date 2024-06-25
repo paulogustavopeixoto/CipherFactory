@@ -63,29 +63,68 @@ const decodedMessage = caesar.decode(encodedMessage, shift);
 
 **Vigenère Cipher**
 
-- **vigenere.encode(message, key):** Encrypts a message using the Vigenère cipher.
-- **vigenere.decode(encodedMessage, key):** Decrypts a message encrypted with the Vigenère cipher.
+The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It employs a keyword, where each letter of the keyword shifts the corresponding letter in the plaintext by a number of positions in the alphabet. For example, if the keyword is "KEY," the first letter of the plaintext is shifted by the position of 'K', the second by 'E', and so on. The process repeats for the length of the message. This method is more secure than the Caesar cipher due to its varying shift values.
+
+```
+// Encrypts a message using the Vigenère cipher.
+const encodedMessage = vigenere.encode(message, key);
+
+// Decrypts a message encrypted with the Vigenère cipher.
+const decodedMessage = vigenere.decode(encodedMessage, key);
+```
 
 **Atbash Cipher**
 
-- **atbash.encode(message):** Encrypts a message using the Atbash cipher.
-- **atbash.decode(encodedMessage):** Decrypts a message encrypted with the Atbash cipher.
+The Atbash cipher is a substitution cipher that is a specific form of the monoalphabetic cipher where each letter of the alphabet is mapped to its reverse. For example, 'A' is substituted with 'Z', 'B' with 'Y', 'C' with 'X', and so on. This cipher is simple and symmetrical, meaning the same algorithm is used for both encryption and decryption.
+
+```
+// Encrypts a message using the Atbash cipher.
+const encodedMessage = atbash.encode(message);
+
+// Decrypts a message encrypted with the Atbash cipher.
+const decodedMessage = atbash.decode(encodedMessage);
+```
 
 **Rail Fence Cipher**
 
-- **railFence.encode(message, key):** Encrypts a message using the Rail Fence cipher.
-- **railFence.decode(encodedMessage, key):** Decrypts a message encrypted with the Rail Fence cipher.
+The Rail Fence cipher is a form of transposition cipher where the plaintext is written in a zigzag pattern on an imaginary fence, and then read off row by row. For example, with a depth of 3, the message "WEAREDISCOVEREDFLEEATONCE" would be written as:
+```
+W . . . E . . . C . . . R . . . L . . . T . . . E
+. E . R . D . S . O . E . D . L . A . O . C .
+. . A . . . I . . . V . . . E . . . F . . . E .
+```
+Then it is read as "WECRLTEERDSOEEFEAOCAIVDEN". This method makes the plaintext less recognizable.
+
+```
+// Encrypts a message using the Rail Fence cipher.
+const encodedMessage = railFence.encode(message, key);
+
+// Decrypts a message encrypted with the Rail Fence cipher.
+const decodedMessage = railFence.decode(encodedMessage, key);
+```
 
 **ROT13 Cipher**
 
-- **rot13.encode(message):** Encrypts a message using the ROT13 cipher.
-- **railFerot13nce.decode(encodedMessage):** Decrypts a message encrypted with the ROT13 cipher.
+The ROT13 cipher is a special case of the Caesar cipher, where the alphabet is rotated by 13 places. Since 13 is half of 26, applying ROT13 twice returns the original text, making it symmetric. For example, 'A' becomes 'N', 'B' becomes 'O', and so on. It is commonly used in online forums to obscure spoilers, puzzles, or sensitive information.
 
+```
+// Encrypts a message using the ROT13 cipher.
+const encodedMessage = rot13.encode(message);
+
+// Decrypts a message encrypted with the ROT13 cipher.
+const decodedMessage = rot13.decode(encodedMessage);
+```
 **Playfair Cipher**
 
-- **playfair.encode(message, key):** Encrypts a message using the Playfair cipher.
-- **playfair.decode(encodedMessage, key):** Decrypts a message encrypted with the Playfair cipher.
+The Playfair cipher is a digraph substitution cipher, which means it encrypts pairs of letters (digraphs) instead of single letters. A 5x5 grid is created using a keyword, with 'I' and 'J' typically sharing a space. Each pair of letters in the plaintext is encrypted according to their positions in the grid: if they are in the same row, column, or form a rectangle. This increases the complexity and security over monoalphabetic ciphers by encoding letter pairs instead of individual letters.
 
+```
+// Encrypts a message using the Playfair cipher.
+const encodedMessage = playfair.encode(message, key);
+
+// Decrypts a message encrypted with the Playfair cipher.
+const decodedMessage = playfair.decode(encodedMessage, key);
+```
 
 ## Contributing
 We welcome contributions to the Cipher Factory project! If you have suggestions for improvements or encounter any issues, please feel free to submit issues or pull requests on our GitHub repository.
