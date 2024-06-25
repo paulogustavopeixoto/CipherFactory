@@ -51,8 +51,15 @@ Below are the API references for the included ciphers. Each cipher supports enco
 
 **Caesar Cipher**
 
-- **caesar.encode(message, shift):** Encrypts a message using the Caesar cipher.
-- **caesar.decode(encodedMessage, shift):** Decrypts a message encrypted with the Caesar cipher.
+The Caesar cipher is a type of substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet. For instance, with a shift of 3, 'A' becomes 'D', 'B' becomes 'E', and so forth. It’s a straightforward and easy-to-implement encryption method, but it is also very easy to break due to its limited number of possible shifts (26 in English).
+
+```
+// Encrypts a message using the Caesar cipher.
+const encodedMessage = caesar.encode(message, shift);
+
+// Decrypts a message encrypted with the Caesar cipher.
+const decodedMessage = caesar.decode(encodedMessage, shift);
+```
 
 **Vigenère Cipher**
 
