@@ -49,12 +49,36 @@ Replace vigenere with any other cipher you wish to use (e.g., caesar, atbash, et
 
 Below are the API references for the included ciphers. Each cipher supports encode and decode functions.
 
+**Caesar Cipher**
+
+- **caesar.encode(message, shift):** Encrypts a message using the Caesar cipher.
+- **caesar.decode(encodedMessage, shift):** Decrypts a message encrypted with the Caesar cipher.
+
 **Vigenère Cipher**
 
-- **encode(message, key):** Encrypts a message using the Vigenère cipher.
-- **decode(encodedMessage, key):** Decrypts a message encrypted with the Vigenère cipher.
+- **vigenere.encode(message, key):** Encrypts a message using the Vigenère cipher.
+- **vigenere.decode(encodedMessage, key):** Decrypts a message encrypted with the Vigenère cipher.
 
-(Add similar sections for Caesar, Atbash, Rail Fence, ROT13, and Playfair ciphers, detailing their specific usage and parameters.)
+**Atbash Cipher**
+
+- **atbash.encode(message):** Encrypts a message using the Atbash cipher.
+- **atbash.decode(encodedMessage):** Decrypts a message encrypted with the Atbash cipher.
+
+**Rail Fence Cipher**
+
+- **railFence.encode(message, key):** Encrypts a message using the Rail Fence cipher.
+- **railFence.decode(encodedMessage, key):** Decrypts a message encrypted with the Rail Fence cipher.
+
+**ROT13 Cipher**
+
+- **rot13.encode(message):** Encrypts a message using the ROT13 cipher.
+- **railFerot13nce.decode(encodedMessage):** Decrypts a message encrypted with the ROT13 cipher.
+
+**Playfair Cipher**
+
+- **playfair.encode(message, key):** Encrypts a message using the Playfair cipher.
+- **playfair.decode(encodedMessage, key):** Decrypts a message encrypted with the Playfair cipher.
+
 
 ## Contributing
 We welcome contributions to the Cipher Factory project! If you have suggestions for improvements or encounter any issues, please feel free to submit issues or pull requests on our GitHub repository.
